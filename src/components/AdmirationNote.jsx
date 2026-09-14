@@ -8,9 +8,9 @@ const admirationSentences = [
   "Tu best hai.",
   "Tu duniya ki sabse sundar ladki hai.",
   "Tujhse zyada sundar ladki saari duniya mein koi nahi hai.",
-  "Teri aankhon duniya mein sabse sundar hai, unhe dekhte hi sab doob jaate hai.",
+  "Teri aankheinn duniya mein sabse sundar hai, unhe dekhte hi sab doob jaate hai.",
   "Tere baal itne silky hai jaise bhagwaan ne baith ke ek ek baal ko haath se handcraft kiya ho.",
-  "Teri hassi itni manmohak hai ki, tujhe hast hua dekh ke saari duniya apna dukh bhul jaati hai.",
+  "Teri hassi itni manmohak hai ki, tujhe hasta hua dekh ke saari duniya apna dukh bhul jaati hai.",
   "Teri awaaz itni meethi hai, maano kaano mein shehed daal diya ho kisine.",
   "Tu sirf earth ki nahi, pure universe ki, nahi pure multiverse ki sabse sundar ladki hai."
 ];
@@ -175,11 +175,10 @@ export default function AdmirationNote() {
             {admirationSentences.map((sentence, idx) => (
               <motion.div key={idx} variants={lineVariants} className="overflow-hidden">
                 <p
-                  className={`text-sm sm:text-base md:text-lg relative ${
-                    idx === 0 || idx === 8
+                  className={`text-sm sm:text-base md:text-lg relative ${idx === 0 || idx === 8
                       ? 'font-medium shimmer-text text-base sm:text-lg md:text-xl py-0.5'
                       : 'text-blush-100/95 font-normal'
-                  }`}
+                    }`}
                 >
                   {sentence}
                 </p>

@@ -13,7 +13,12 @@ const apologySentences = [
   "Please mujhe maaf karde.",
   "I am really really sorry.",
   "I know mujhse galti hogayi, main nahi karunga agli baar se.",
-  "Tu iss baar maaf kar dena."
+  "Tu iss baar maaf kar dena.",
+  "Meri pichli mistakes ke liye bhi please maaf kar de mujhe.",
+  "Maine tujhe kal bhi bohat pareshan kiya, rulaya bhi, Tedx waale dino mein bhi idhar udhar bhagaa.",
+  "Tujhe itne din good night bhi nahi bola dhang se.",
+  "Special bhi nahi feel karwaya, constant galtiya karke.",
+  "I am really really sorry for everything."
 ];
 
 export default function ApologyNote() {
@@ -61,7 +66,7 @@ export default function ApologyNote() {
 
         {/* Card & Blooming Flower Layout */}
         <div className="relative w-full max-w-[720px] mx-auto flex flex-col items-center">
-          
+
           {/* Wilted-to-Blooming Lotus Ornament */}
           <motion.div
             className="mb-3 sm:mb-4 flex flex-col items-center select-none"
@@ -130,11 +135,10 @@ export default function ApologyNote() {
                 <motion.p
                   key={idx}
                   variants={lineVariants}
-                  className={`text-sm sm:text-base md:text-lg font-sans tracking-normal ${
-                    idx === 0 || idx === 7 || idx === 8 || idx === 10
+                  className={`text-sm sm:text-base md:text-lg font-sans tracking-normal ${idx === 0 || idx === 7 || idx === 8 || idx === 10
                       ? 'font-medium text-magenta-deep'
                       : 'text-ink/90'
-                  }`}
+                    }`}
                 >
                   {sentence}
                 </motion.p>

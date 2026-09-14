@@ -7,7 +7,7 @@ const missYouSentences = [
   "I miss you so much Chiku.",
   "Main tere bina bilkul nahi reh paa raha.",
   "Mujhe teri bohat yaad aa rahi hai.",
-  "Mujhe tere paana hai.",
+  "Mujhe tere paas aana hai.",
   "Tujhe zor se hug karna hai.",
   "Tere gaal kheechne hai.",
   "Pata nahi ye bacha hua hafta kaise niklega.",
@@ -114,13 +114,12 @@ export default function MissYouNote() {
               <motion.p
                 key={idx}
                 variants={lineVariants}
-                className={`text-sm sm:text-base md:text-lg ${
-                  idx === 0 || idx === 8
+                className={`text-sm sm:text-base md:text-lg ${idx === 0 || idx === 8
                     ? 'font-medium text-magenta-deep'
                     : idx === 6 || idx === 7
-                    ? 'text-ink font-medium italic'
-                    : 'text-ink/85'
-                }`}
+                      ? 'text-ink font-medium italic'
+                      : 'text-ink/85'
+                  }`}
               >
                 {sentence}
               </motion.p>

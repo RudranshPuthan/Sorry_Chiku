@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'Quicksand', sans-serif;
+  }
+
+  /* Custom sleek pink scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FFF5F7;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #FFB6C1;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF69B4;
+  }
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 35px -5px rgba(255, 182, 193, 0.35), 0 0 1px 1px rgba(255, 214, 226, 0.4) inset;
+}
+
+.glass-card-dark {
+  background: rgba(45, 20, 36, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 182, 193, 0.25);
+  box-shadow: 0 15px 40px -5px rgba(194, 24, 91, 0.3), 0 0 20px rgba(255, 105, 180, 0.15) inset;
+}
+
+/* Moving Shimmer / Light Beam Effect */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ffe4ec 20%,
+    #ff69b4 50%,
+    #ffe4ec 80%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerSweep 4s linear infinite;
+}
+
+@keyframes shimmerSweep {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* Animated living gradient for hero */
+.hero-gradient-bg {
+  background: linear-gradient(135deg, #FFF5F7 0%, #FFE4EC 35%, #F3D9FA 70%, #FFF5F7 100%);
+  background-size: 300% 300%;
+  animation: gradientShift 14s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Subtle glow text for headings */
+.heading-glow {
+  text-shadow: 0 2px 14px rgba(194, 24, 91, 0.25), 0 0 35px rgba(255, 105, 180, 0.2);
+}
+
+.star-glow {
+  text-shadow: 0 0 12px rgba(255, 182, 193, 0.8), 0 0 24px rgba(255, 105, 180, 0.5);
+}
+
+/* Reduce motion overrides */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
